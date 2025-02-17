@@ -1,6 +1,6 @@
 {
   imports = [
     #./sessions.nix
-    ./misc.nix
+    # ./misc.nix
   ];
 }

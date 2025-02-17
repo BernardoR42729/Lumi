@@ -1,6 +1,7 @@
 {
   imports = [
     ./motion
+    ./rooter.nix
     ./project.nix
     ./smart-splits.nix
     ./sessions.nix
