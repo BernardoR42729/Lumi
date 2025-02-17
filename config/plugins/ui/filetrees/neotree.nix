@@ -6,7 +6,9 @@
         setupOpts = {
           git_status_async = true;
           enable_diagnostics = true;
+          enable_refresh_on_write = true;
           filesystem = {
+            bind_to_cwd = false;
             hijack_netrw_behavior = "open_current";
             follow_current_file = {
               enabled = true;
