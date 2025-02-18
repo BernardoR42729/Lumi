@@ -2,6 +2,7 @@
   imports = [
     ./themes
     ./filetrees
+    ./image.nix
     ./which-key.nix
     ./dropbar.nix
     ./noice.nix
