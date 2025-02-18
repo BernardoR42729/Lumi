@@ -22,6 +22,14 @@
             };
           };
         };
+        extensions = {
+          fzf = {
+            fuzzy = true;
+            override_generic_sorter = true;
+            override_file_sorter = true;
+            case_mode = "smart_case";
+          };
+        };
       };
       mappings = {
         buffers = "<leader>fb";
@@ -31,5 +39,7 @@
         liveGrep = "<leader>fg";
       };
     };
+
+    extraPlugins.telescope-media-files = {package = pkgs.vimPlugins.telescope-fzf-native-nvim;};
   };
 }
