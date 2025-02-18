@@ -1,13 +1,11 @@
 <h1 align="center">
 A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
-
 <br>
-
-<img src="./.github/assets/separator.png" width="600px">
-
+<img src="./.github/assets/separator.png" width="600px" />
 <br>
 
 <div align="center">
+    <p></p>
     <a href="https://github.com/BANanaD3V/Lumi/issues">
         <img src="https://img.shields.io/github/issues/BANanaD3V/Lumi?color=A6DA95&labelColor=1e1e2e&style=for-the-badge">
     </a>
@@ -20,6 +18,7 @@ A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
     <a href="https://github.com/BANanaD3V/Lumi/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/made_with-nix-EA9999?color=8BD5CA&labelColor=1e1e2e&style=for-the-badge">
     </a>
+    <br>
 </div>
 </h1>
 
