@@ -22,6 +22,9 @@ A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
 </div>
 </h1>
 
+
+## What is Lumi?
+
 Lumi is a neovim configuration made with nvf for the best user experience while
 having sane defaults.
 
