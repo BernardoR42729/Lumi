@@ -39,7 +39,11 @@
         liveGrep = "<leader>fg";
       };
     };
-
+    luaConfigRC.telescope =
+      # lua
+      ''
+        require('telescope').load_extension('fzf')
+      '';
     extraPlugins.telescope-media-files = {package = pkgs.vimPlugins.telescope-fzf-native-nvim;};
   };
 }

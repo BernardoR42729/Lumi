@@ -1,5 +1,10 @@
-{
+{pkgs, ...}: {
   config.vim = {
+    extraPackages = with pkgs; [
+      fzf
+      ripgrep
+      fd
+    ];
     luaConfigPost =
       # lua
       ''
