@@ -18,15 +18,15 @@ A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
     <a href="https://github.com/BANanaD3V/Lumi/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/made_with-nix-EA9999?color=8BD5CA&labelColor=1e1e2e&style=for-the-badge">
     </a>
-    <br>
 </div>
+    <br>
 </h1>
 
 
 ## What is Lumi?
 
-Lumi is a neovim configuration made with nvf for the best user experience while
-having sane defaults.
+<p>Lumi is a neovim configuration made with nvf for the best user experience while
+having sane defaults.</p>
 
 <img src="./.github/assets/showcase_main.png" alt="Main screen">
 
