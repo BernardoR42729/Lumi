@@ -1,8 +1,13 @@
 <h1 align="center">
 A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
-</h1>
-<h1 align="center">
-<div>
+
+<br>
+
+<img src="./.github/assets/separator.png" width="600px">
+
+<br>
+
+<div align="center">
     <a href="https://github.com/BANanaD3V/Lumi/issues">
         <img src="https://img.shields.io/github/issues/BANanaD3V/Lumi?color=A6DA95&labelColor=1e1e2e&style=for-the-badge">
     </a>
@@ -16,8 +21,6 @@ A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
         <img src="https://img.shields.io/badge/made_with-nix-EA9999?color=8BD5CA&labelColor=1e1e2e&style=for-the-badge">
     </a>
 </div>
-<br>
-<img src="./.github/assets/separator.png" width="600px">
 </h1>
 
 Lumi is a neovim configuration made with nvf for the best user experience while having sane defaults.
