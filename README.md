@@ -1,7 +1,7 @@
 <h1 align="center">
 A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
 <br>
-<img src="./.github/assets/separator.png" width="600px" />
+<img src="./.github/assets/separator.png?" width="600px" />
 <br>
 
 <div align="center">
@@ -22,7 +22,8 @@ A neovim config made with <a href="https://github.com/NotAShelf/nvf">nvf</a>
 </div>
 </h1>
 
-Lumi is a neovim configuration made with nvf for the best user experience while having sane defaults.
+Lumi is a neovim configuration made with nvf for the best user experience while
+having sane defaults.
 
 <img src="./.github/assets/showcase_main.png" alt="Main screen">
 
@@ -37,9 +38,12 @@ Lumi is a neovim configuration made with nvf for the best user experience while 
 
 ## Features
 
-- **Beautiful customization**. Plugins are carefully chosen to make the config look good and consistent.
-- **A powerful environment**. Lumi comes with a wide range of LSPs setup by default, aswell as other plugins to help you with developing.
-- **Nix integration**. Lumi can be customized using nix modules system and accept a base16 colorscheme, so you can have it adapt to your rice.
+- **Beautiful customization**. Plugins are carefully chosen to make the config
+  look good and consistent.
+- **A powerful environment**. Lumi comes with a wide range of LSPs setup by
+  default, aswell as other plugins to help you with developing.
+- **Nix integration**. Lumi can be customized using nix modules system and
+  accept a base16 colorscheme, so you can have it adapt to your rice.
 
 ## Installation
 
@@ -59,9 +63,11 @@ home.packages = [
 ];
 ```
 
-> [!NOTE]  
+> [!NOTE]\
 > A way to install Lumi using a module for customization is coming soon.
 
 ## Contributing and support
 
-You are welcome to contribute and ask for support. To do so, [open an issue](https://github.com/BANanaD3V/Lumi/issues) or [submit a pull request](https://github.com/BANanaD3V/Lumi/pulls).
+You are welcome to contribute and ask for support. To do so,
+[open an issue](https://github.com/BANanaD3V/Lumi/issues) or
+[submit a pull request](https://github.com/BANanaD3V/Lumi/pulls).
