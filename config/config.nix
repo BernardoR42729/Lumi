@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   config.vim = {
     extraPackages = with pkgs; [
+      git
       fzf
       ripgrep
       fd
