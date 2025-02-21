@@ -1,6 +1,7 @@
 {
   imports = [
     ./motion
+    ./wakatime.nix
     ./rooter.nix
     ./project.nix
     ./smart-splits.nix
