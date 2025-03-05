@@ -5,6 +5,7 @@
       fzf
       ripgrep
       fd
+      zoxide
     ];
     luaConfigPost =
       # lua

@@ -29,6 +29,9 @@
             override_file_sorter = true;
             case_mode = "smart_case";
           };
+          zoxide = {
+            prompt_title = "Change directory";
+          };
         };
       };
       mappings = {
@@ -39,11 +42,28 @@
         liveGrep = "<leader>fg";
       };
     };
+    keymaps = [
+      {
+        key = "<leader>z";
+        mode = ["n"];
+        action = ":Telescope zoxide list<CR>";
+        silent = true;
+        desc = "Change directory using zoxide";
+      }
+    ];
     luaConfigRC.telescope =
       # lua
       ''
         require('telescope').load_extension('fzf')
+        require('telescope').load_extension('zoxide')
       '';
-    extraPlugins.telescope-media-files = {package = pkgs.vimPlugins.telescope-fzf-native-nvim;};
+    extraPlugins = {
+      telescope-fzf-nvim = {
+        package = pkgs.vimPlugins.telescope-fzf-native-nvim;
+      };
+      telescope-zoxide = {
+        package = pkgs.vimPlugins.telescope-zoxide;
+      };
+    };
   };
 }
