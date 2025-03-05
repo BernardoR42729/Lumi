@@ -37,7 +37,7 @@
     options = {
       sessionoptions = "buffers,curdir,tabpages,winsize,help,globals,skiprtp,folds";
       expandtab = false;
-
+      cursorline = true;
       magic = true;
       gdefault = true;
 
@@ -85,6 +85,7 @@
       fileencoding = "utf-8";
 
       cmdheight = 2;
+      shada = "!,'1000,<50,s10,h";
     };
   };
 }
