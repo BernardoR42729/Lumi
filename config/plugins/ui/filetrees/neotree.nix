@@ -8,26 +8,25 @@
           sources = ["filesystem" "buffers" "git_status"];
           enable_diagnostics = true;
           enable_refresh_on_write = true;
-
           source_selector = {
             winbar = true;
             content_layout = "center";
             sources = [
               {
                 source = "filesystem";
-                display_name = " File";
+                display_name = " Files";
               }
               {
                 source = "buffers";
-                display_name = " Bufs";
+                display_name = "󰈙 Bufs";
               }
               {
                 source = "git_status";
-                display_name = " Git";
+                display_name = "󰊢 Git";
               }
               {
                 source = "diagnostics";
-                display_name = " Diagnostic";
+                display_name = "󰒡 Diagnostic";
               }
             ];
           };
