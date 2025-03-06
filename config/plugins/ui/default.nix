@@ -3,6 +3,7 @@
     ./themes
     ./filetrees
     ./image.nix
+    ./heirline.nix
     ./which-key.nix
     ./dropbar.nix
     ./noice.nix
@@ -17,7 +18,7 @@
     ./zen-mode.nix
     ./alpha.nix
     ./colorizer.nix
-    ./lualine.nix
-    ./tabline.nix
+    # ./lualine.nix
+    # ./tabline.nix
   ];
 }
