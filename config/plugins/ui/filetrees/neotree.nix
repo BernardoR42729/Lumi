@@ -33,7 +33,6 @@
           };
           filesystem = {
             use_libuv_file_watcher = true;
-            hijack_netrw_behavior = "open_current";
             follow_current_file = {
               enabled = true;
               leave_dirs_open = false;
