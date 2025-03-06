@@ -7,6 +7,7 @@
         win.border = "none";
         icons = {
           separator = "";
+          rules = false;
           group = "";
         };
       };

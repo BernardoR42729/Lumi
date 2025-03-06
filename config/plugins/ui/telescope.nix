@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   config.vim = {
+    binds.whichKey.register = {
+      "<leader>b" = "󰓩 Buffers";
+    };
     telescope = {
       enable = true;
       setupOpts = {
