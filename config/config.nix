@@ -31,61 +31,61 @@
     };
     globals = {
       mapleader = " ";
+      maplocalleader = ",";
+      big_file = {
+        size = 1024 * 5000;
+        lines = 50000;
+      };
       editorconfig = true;
     };
     useSystemClipboard = true;
     options = {
-      sessionoptions = "buffers,curdir,tabpages,winsize,help,globals,skiprtp,folds";
-      expandtab = false;
-      cursorline = true;
-      magic = true;
-      gdefault = true;
-
-      autoindent = false;
-      smartindent = false;
-      shiftwidth = 2;
-
       breakindent = true;
-
-      hlsearch = true;
-      incsearch = true;
-
-      wrap = true;
-
-      splitbelow = true;
-      splitright = true;
-
-      infercase = true;
-      smartcase = true;
-      grepprg = "rg --vimgrep";
-      grepformat = "%f:%l:%c:%m";
-
-      updatetime = 50;
-
-      completeopt = "menuone,noselect,noinsert";
-
-      swapfile = false;
-      backup = false;
-      undofile = true;
-
-      termguicolors = true;
-
-      signcolumn = "yes";
-
-      foldcolumn = "1";
+      clipboard = "unnamedplus";
+      cmdheight = 0;
+      copyindent = true;
+      cursorline = true;
+      expandtab = true;
+      fileencoding = "utf-8";
+      foldenable = true;
       foldlevel = 99;
       foldlevelstart = 99;
-      foldenable = true;
+      foldcolumn = "1";
+      ignorecase = true;
+      infercase = true;
 
-      scrolloff = 1000;
+      laststatus = 3;
+      linebreak = true;
+      number = true;
+      preserveindent = true;
+      pumheight = 10;
+      relativenumber = false;
+      shiftwidth = 2;
+      showmode = false;
+      showtabline = 2;
+      signcolumn = "yes";
+      smartcase = true;
+      smartindent = false;
+      splitbelow = true;
+      splitright = true;
+      tabstop = 2;
 
-      timeoutlen = 10;
-
-      encoding = "utf-8";
-      fileencoding = "utf-8";
-
-      cmdheight = 2;
+      termguicolors = true;
+      undofile = true;
+      updatetime = 300;
+      virtualedit = "block";
+      writebackup = false;
       shada = "!,'1000,<50,s10,h";
+      history = 1000;
+      swapfile = false;
+      wrap = true;
+      colorcolumn = "80";
+      mousescroll = "ver:1,hor:0";
+      guicursor = "n:blinkon200,i-ci-ve:ver25";
+      autochdir = true;
+      scrolloff = 1000;
+      sidescrolloff = 8;
+      selection = "old";
     };
   };
 }
