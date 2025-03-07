@@ -18,6 +18,10 @@
         };
       };
     };
+    binds.whichKey.register = {
+      "<leader>b" = "󰓩 Buffers";
+      "<leader>bs" = "󰒺 Sort Buffers";
+    };
     luaConfigRC.heirline =
       # lua
       ''
@@ -90,7 +94,87 @@
           */
           ''
             function()
-              vim.cmd "wa"
+              require("heirline-components.buffer").nav(vim.v.count > 0 and vim.v.count or 1)
+            end
+          '';
+        key = "<Tab>";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Next buffer";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1))
+            end
+          '';
+        key = "<S-Tab>";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Previous buffer";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").wipe()
+            end
+          '';
+        key = "<leader>c";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Wipe buffer";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").close()
+            end
+          '';
+        key = "<leader>C";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Close buffer";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              vim.cmd("silent! close")
+            end
+          '';
+        key = "<leader>bw";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Close window";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              vim.cmd("wa")
             end
           '';
         key = "<leader>ba";
@@ -106,54 +190,14 @@
           */
           ''
             function()
-                buffer_picker(function(bufnr)
-                  vim.cmd.split()
-                  vim.api.nvim_win_set_buf(0, bufnr)
-                end)
-              end
-          '';
-        key = "<leader>b\\";
-        lua = true;
-        mode = "n";
-        silent = true;
-        desc = "Split buffer from tabline horizontally";
-      }
-      {
-        action =
-          /*
-          lua
-          */
-          ''
-            function()
-                buffer_picker(function(bufnr)
-                  vim.cmd.vsplit()
-                  vim.api.nvim_win_set_buf(0, bufnr)
-                end)
-              end
-          '';
-        key = "<leader>b|";
-        lua = true;
-        mode = "n";
-        silent = true;
-        desc = "Split buffer from tabline vertically";
-      }
-      {
-        action =
-          /*
-          lua
-          */
-          ''
-            function()
-              buffer_picker(function(bufnr)
-                vim.api.nvim_win_set_buf(0, bufnr)
-              end)
+              require("heirline-components.buffer").move(vim.v.count > 0 and vim.v.count or 1)
             end
           '';
-        key = "<leader>bb";
+        key = ">b";
         lua = true;
         mode = "n";
         silent = true;
-        desc = "Select buffer from tabline";
+        desc = "Move buffer tab right";
       }
       {
         action =
@@ -162,17 +206,14 @@
           */
           ''
             function()
-              buffer_picker(function(bufnr)
-                local buftype = vim.api.nvim_get_option_value("buftype", { buf = bufnr })
-                vim.cmd(("silent! %s %d"):format((force or buftype == "terminal") and "bdelete!" or "confirm bdelete", bufnr))
-              end)
+              require("heirline-components.buffer").move(-(vim.v.count > 0 and vim.v.count or 1))
             end
           '';
-        key = "<leader>bd";
+        key = "<b";
         lua = true;
         mode = "n";
         silent = true;
-        desc = "Delete buffer from tabline";
+        desc = "Move buffer tab left";
       }
       {
         action =
@@ -181,13 +222,7 @@
           */
           ''
             function()
-              local current = vim.api.nvim_get_current_buf()
-              for _, bufnr in ipairs(vim.t.bufs) do
-                if bufnr ~= current then
-                  local buftype = vim.api.nvim_get_option_value("buftype", { buf = bufnr })
-                  vim.cmd(("silent! %s %d"):format((force or buftype == "terminal") and "bdelete!" or "confirm bdelete", bufnr))
-                end
-              end
+              require("heirline-components.buffer").close_all(true)
             end
           '';
         key = "<leader>bc";
@@ -203,11 +238,7 @@
           */
           ''
             function()
-              local current = vim.api.nvim_get_current_buf()
-              for _, bufnr in ipairs(vim.t.bufs) do
-                local buftype = vim.api.nvim_get_option_value("buftype", { buf = bufnr })
-                vim.cmd(("silent! %s %d"):format((force or buftype == "terminal") and "bdelete!" or "confirm bdelete", bufnr))
-              end
+              require("heirline-components.buffer").close_all()
             end
           '';
         key = "<leader>bC";
@@ -215,6 +246,192 @@
         mode = "n";
         silent = true;
         desc = "Close all buffers";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.all").heirline.buffer_picker(
+                function(bufnr) vim.api.nvim_win_set_buf(0, bufnr) end
+              )
+            end
+          '';
+        key = "<leader>bb";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Select buffer from tabline";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.all").heirline.buffer_picker(
+                function(bufnr) require("heirline-components.buffer").close(bufnr) end
+              )
+            end
+          '';
+        key = "<leader>bd";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Delete buffer from tabline";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").close_left()
+            end
+          '';
+        key = "<leader>bl";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Close all buffers to the left";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").close_right()
+            end
+          '';
+        key = "<leader>br";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Close all buffers to the right";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.all").heirline.buffer_picker(function(bufnr)
+                vim.cmd.split()
+                vim.api.nvim_win_set_buf(0, bufnr)
+              end)
+            end
+          '';
+        key = "<leader>b\\";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Horizontal split buffer from tabline";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.all").heirline.buffer_picker(function(bufnr)
+                vim.cmd.vsplit()
+                vim.api.nvim_win_set_buf(0, bufnr)
+              end)
+            end
+          '';
+        key = "<leader>b|";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Vertical split buffer from tabline";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").sort "extension"
+            end
+          '';
+        key = "<leader>bse";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Sort by extension";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").sort "unique_path"
+            end
+          '';
+        key = "<leader>bsr";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Sort by relative path";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").sort "full_path"
+            end
+          '';
+        key = "<leader>bsp";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Sort by full path";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").sort "bufnr"
+            end
+          '';
+        key = "<leader>bsi";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Sort by buffer number";
+      }
+      {
+        action =
+          /*
+          lua
+          */
+          ''
+            function()
+              require("heirline-components.buffer").sort "modified"
+            end
+          '';
+        key = "<leader>bsm";
+        lua = true;
+        mode = "n";
+        silent = true;
+        desc = "Sort by modification";
       }
     ];
   };
