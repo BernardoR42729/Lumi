@@ -2,6 +2,7 @@
   imports = [
     ./nvim-cmp.nix
     ./otter.nix
+    ./aerial.nix
     ./debug.nix
     ./lsp.nix
     ./treesitter.nix
