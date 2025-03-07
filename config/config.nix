@@ -46,6 +46,7 @@
       cmdheight = 0;
       copyindent = true;
       cursorline = true;
+      cursorlineopt = "number";
       expandtab = true;
       fileencoding = "utf-8";
       foldenable = true;
