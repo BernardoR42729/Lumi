@@ -57,6 +57,67 @@
             lib.component.fill { hl = { bg = "bg", fg = "fg" } },
             lib.component.tabline_tabpages()
           },
+          winbar = {
+            init = function(self) self.bufnr = vim.api.nvim_get_current_buf() end,
+            fallthrough = false,
+            {
+              condition = function() return not lib.condition.is_active() end,
+              {
+                lib.component.neotree({
+                  neotree = {
+                    condition = function() return true end,
+                  },
+                }),
+                lib.component.compiler_play({
+                  compiler_play = {
+                    condition = function() return true end,
+                  },
+                }),
+                lib.component.fill(),
+                lib.component.compiler_redo({
+                  compiler_redo = {
+                    condition = function() return true end,
+                  },
+                }),
+                lib.component.aerial({
+                  aerial = {
+                    condition = function() return true end,
+                  },
+                }),
+              },
+            },
+            {
+              lib.component.neotree({
+                neotree = {
+                  condition = function() return true end,
+                },
+              }),
+              lib.component.compiler_play({
+                compiler_play = {
+                  condition = function() return true end,
+                },
+              }),
+              lib.component.fill(),
+              lib.component.breadcrumbs(),
+              lib.component.fill(),
+              lib.component.compiler_redo({
+                compiler_redo = {
+                  condition = function() return true end,
+                },
+              }),
+              lib.component.aerial({
+                aerial = {
+                  condition = function() return true end,
+                },
+              }),
+            }
+          },
+          -- statuscolumn = { -- UI left column
+          --   init = function(self) self.bufnr = vim.api.nvim_get_current_buf() end,
+          --   lib.component.foldcolumn(),
+          --   lib.component.numbercolumn(),
+          --   lib.component.signcolumn(),
+          -- } or nil,
           statusline = {
             hl = { fg = "fg", bg = "bg" },
             lib.component.mode(),
