@@ -2,24 +2,28 @@
   config.vim.ui.noice = {
     enable = true;
     setupOpts = {
-      notify = {
-        enabled = false;
+      presets = {
+        bottom_search = true;
       };
-      messages = {
-        enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason
+      cmdline = {
+        view = "cmdline";
+        format = {
+          cmdline = {conceal = false;};
+          search_down = {conceal = false;};
+          search_up = {conceal = false;};
+          filter = {conceal = false;};
+          lua = {conceal = false;};
+          help = {conceal = false;};
+          input = {conceal = false;};
+        };
       };
+      messages.enabled = false;
       lsp = {
-        message = {
-          enabled = true;
-        };
-        progress = {
-          enabled = false;
-          view = "mini";
-        };
-      };
-      popupmenu = {
-        enabled = true;
-        backend = "nui";
+        hover.enabled = false;
+        progress.enabled = false;
+        smart_move.enabled = false;
+        message.enabled = false;
+        signature.enabled = false;
       };
       format = {
         filter = {
