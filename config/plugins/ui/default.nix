@@ -10,7 +10,6 @@
     ./cursorline.nix
     ./fidget.nix
     ./telescope.nix
-    ./indent-blankline.nix
     ./showkeys.nix
     ./web-devicons.nix
     ./smartcolumn.nix
