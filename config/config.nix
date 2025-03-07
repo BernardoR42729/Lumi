@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   config.vim = {
+    enableLuaLoader = true;
     extraPackages = with pkgs; [
       git
       fzf
