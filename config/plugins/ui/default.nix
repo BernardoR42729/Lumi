@@ -17,7 +17,5 @@
     ./zen-mode.nix
     ./alpha.nix
     ./colorizer.nix
-    # ./lualine.nix
-    # ./tabline.nix
   ];
 }
