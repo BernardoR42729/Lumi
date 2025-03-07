@@ -9,7 +9,6 @@
     ./todo-comments.nix
     ./comment.nix
     ./neocord.nix
-    ./yazi.nix
     ./spectre.nix
   ];
 }
