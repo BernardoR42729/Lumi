@@ -16,6 +16,7 @@
     ./telescope.nix
     ./showkeys.nix
     ./web-devicons.nix
+    ./notify.nix
     ./smartcolumn.nix
     ./toggleterm.nix
     ./zen-mode.nix
