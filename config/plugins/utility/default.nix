@@ -2,6 +2,7 @@
   imports = [
     ./motion
     ./wakatime.nix
+    ./suda.nix
     ./rooter.nix
     ./better-escape.nix
     ./project.nix
