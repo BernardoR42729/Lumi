@@ -32,6 +32,30 @@
               }
             ];
           };
+          default_component_configs = {
+            indent = {padding = 0;};
+            icon = {
+              folder_closed = "";
+              folder_open = "";
+              folder_empty = "";
+              folder_empty_open = "";
+              default = "󰈙";
+            };
+            modified.symbol = "";
+            git_status = {
+              symbols = {
+                added = "";
+                deleted = "";
+                modified = "";
+                renamed = "➜";
+                untracked = "★";
+                ignored = "◌";
+                unstaged = "✗";
+                staged = "✓";
+                conflict = "";
+              };
+            };
+          };
           filesystem = {
             use_libuv_file_watcher = true;
             follow_current_file = {
