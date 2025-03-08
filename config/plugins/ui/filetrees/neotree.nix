@@ -5,6 +5,8 @@
         enable = true;
         setupOpts = {
           git_status_async = true;
+          auto_clean_after_session_restore = true;
+          buffers.show_unloaded = true;
           sources = ["filesystem" "buffers" "git_status"];
           enable_diagnostics = true;
           enable_refresh_on_write = true;

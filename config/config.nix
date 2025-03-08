@@ -55,6 +55,7 @@
       foldcolumn = "1";
       ignorecase = true;
       infercase = true;
+      sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,terminal";
 
       laststatus = 3;
       linebreak = true;
