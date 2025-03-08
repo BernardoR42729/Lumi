@@ -13,6 +13,7 @@
     ./dropbar.nix
     ./noice.nix
     ./cursorline.nix
+    ./highlight-undo.nix
     ./fidget.nix
     ./telescope.nix
     ./showkeys.nix
