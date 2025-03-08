@@ -44,6 +44,7 @@
       breakindent = true;
       clipboard = "unnamedplus";
       cmdheight = 0;
+      completeopt = "menu,menuone,noselect";
       copyindent = true;
       cursorline = true;
       cursorlineopt = "number";
