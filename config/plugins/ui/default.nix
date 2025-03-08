@@ -2,6 +2,7 @@
   imports = [
     ./themes
     ./filetrees
+    ./nvim-ufo.nix
     ./image.nix
     ./heirline.nix
     ./which-key.nix
