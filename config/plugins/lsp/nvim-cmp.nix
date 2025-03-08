@@ -2,6 +2,9 @@
   config.vim.autocomplete.nvim-cmp = {
     enable = true;
     setupOpts = {
+      snippet = {
+        expand = lib.generators.mkLuaInline ''function(args) luasnip.lsp_expand(args.body) end'';
+      };
       duplicates = {
         nvim_lsp = 1;
         lazydev = 1;
