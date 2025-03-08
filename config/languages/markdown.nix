@@ -1,12 +1,16 @@
-{
-  vim.languages.markdown = {
-    enable = true;
-    format = {
+{pkgs, ...}: {
+  vim = {
+    languages.markdown = {
       enable = true;
-      extraFiletypes = ["mdx"];
+      format = {
+        enable = true;
+        extraFiletypes = ["mdx"];
+      };
+      lsp.enable = true;
+      treesitter.enable = true;
     };
-    lsp.enable = true;
-    treesitter.enable = true;
-    extensions.render-markdown-nvim.enable = true;
+    extraPlugins.markview = with pkgs.vimPlugins; {
+      package = markview-nvim;
+    };
   };
 }
