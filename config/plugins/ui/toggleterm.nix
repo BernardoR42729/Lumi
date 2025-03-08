@@ -7,6 +7,12 @@
       setupOpts = {
         winbar.enabled = false;
         start_in_insert = true;
+        size = 10;
+        shading_factor = 2;
+        direction = "float";
+        float_opts = {
+          border = "rounded";
+        };
       };
     };
     keymaps = [
