@@ -4,7 +4,10 @@
       "smart-splits.nvim" = {
         package = pkgs.vimPlugins.smart-splits-nvim;
         setupModule = "smart-splits";
-        setupOpts = {};
+        setupOpts = {
+          ignored_filetypes = ["nofile" "quickfix" "qf" "prompt"];
+          ignored_buftypes = ["nofile"];
+        };
         lazy = true;
       };
     };
