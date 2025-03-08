@@ -10,6 +10,7 @@
     ./todo-comments.nix
     ./comment.nix
     ./neocord.nix
+    ./neoclip.nix
     ./spectre.nix
   ];
 }
