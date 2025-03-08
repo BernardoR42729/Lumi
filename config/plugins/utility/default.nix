@@ -3,6 +3,7 @@
     ./motion
     ./wakatime.nix
     ./rooter.nix
+    ./better-escape.nix
     ./project.nix
     ./smart-splits.nix
     ./sessions.nix
