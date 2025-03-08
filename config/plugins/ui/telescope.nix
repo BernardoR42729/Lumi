@@ -7,6 +7,23 @@
       enable = true;
       setupOpts = {
         defaults = {
+          prompt_prefix = "❯ ";
+          selection_caret = "❯ ";
+          multi_icon = "❯ ";
+          path_display = ["truncate"];
+          sorting_strategy = "ascending";
+          layout_config = {
+            horizontal = {
+              prompt_position = "top";
+              preview_width = 0.50;
+            };
+            vertical = {
+              mirror = false;
+            };
+            width = 0.87;
+            height = 0.80;
+            preview_cutoff = 120;
+          };
           vimgrep_arguments = [
             "${pkgs.ripgrep}/bin/rg"
             "--color=never"
@@ -26,6 +43,7 @@
           };
         };
         extensions = {
+          # TODO: Telescope undo
           fzf = {
             fuzzy = true;
             override_generic_sorter = true;
@@ -60,6 +78,9 @@
         require('telescope').load_extension('fzf')
         require('telescope').load_extension("neoclip")
         require('telescope').load_extension('zoxide')
+        require('telescope').load_extension("notify")
+        require('telescope').load_extension("projects")
+        require('telescope').load_extension("aerial")
       '';
     extraPlugins = {
       telescope-fzf-nvim = {
