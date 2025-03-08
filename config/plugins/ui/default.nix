@@ -5,6 +5,7 @@
   imports = [
     ./themes
     ./filetrees
+    ./scrollbar.nix
     ./nvim-ufo.nix
     ./image.nix
     ./heirline.nix
