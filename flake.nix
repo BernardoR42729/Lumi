@@ -18,7 +18,7 @@
 
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
-    configModule = import ./config;
+    configModule = ./config;
   in {
     packages = forAllSystems (system: {
       default =
