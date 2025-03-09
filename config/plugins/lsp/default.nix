@@ -1,6 +1,7 @@
 {
   imports = [
     ./nvim-cmp.nix
+    ./git-fugitive.nix
     ./otter.nix
     ./aerial.nix
     ./luasnip.nix
