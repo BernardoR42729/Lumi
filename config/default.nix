@@ -3,6 +3,6 @@
     ./plugins
     ./languages
     ./config.nix
-    #./keymaps.nix
+    ./keymaps.nix
   ];
 }
