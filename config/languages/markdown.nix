@@ -8,9 +8,7 @@
       };
       lsp.enable = true;
       treesitter.enable = true;
-    };
-    extraPlugins.markview = with pkgs.vimPlugins; {
-      package = markview-nvim;
+      extensions.markview-nvim.enable = true;
     };
   };
 }
