@@ -10,6 +10,6 @@
     ./treesitter.nix
     ./guess-indent.nix
     ./autopairs.nix
-    ./trouble.nix
+    # ./trouble.nix
   ];
 }

@@ -18,10 +18,6 @@
         };
       };
     };
-    binds.whichKey.register = {
-      "<leader>b" = "󰓩 Buffers";
-      "<leader>bs" = "󰒺 Sort Buffers";
-    };
     luaConfigRC.heirline =
       # lua
       ''

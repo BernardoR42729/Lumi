@@ -12,6 +12,6 @@
     ./comment.nix
     ./neocord.nix
     ./neoclip.nix
-    ./spectre.nix
+    # ./spectre.nix
   ];
 }

@@ -1,8 +1,5 @@
 {
   config.vim = {
-    binds.whichKey.register = {
-      "<leader>l" = " LSP";
-    };
     lsp = {
       enable = true;
       formatOnSave = true;

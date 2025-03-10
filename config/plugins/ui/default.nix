@@ -1,7 +1,4 @@
 {
-  config.vim.binds.whichKey.register = {
-    "<leader>u" = " UI";
-  };
   imports = [
     ./themes
     ./filetrees
