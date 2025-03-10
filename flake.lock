@@ -148,11 +148,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1741600279,
-        "narHash": "sha256-dWRcjf8ud4k/q1j1642c0xIWoYP4Ilw82aJact1jIWA=",
+        "lastModified": 1741601727,
+        "narHash": "sha256-2yC79r6OY3oJkgxg2NPApTRk56DN2jOu8Ai3iNX+LIA=",
         "owner": "bananad3v",
         "repo": "nvf",
-        "rev": "9308728352c068f1a8392b92ce4faa81b8d7abae",
+        "rev": "86a85594217ef649092dee6bd3b90805e5a3c7b2",
         "type": "github"
       },
       "original": {
