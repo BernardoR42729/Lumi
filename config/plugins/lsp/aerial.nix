@@ -11,7 +11,6 @@
         link_tree_to_folds = true;
         attach_mode = "global";
         backends = ["lsp" "treesitter" "markdown" "man"];
-        filter_kind = false;
         layout = {
           max_width = 28;
           default_direction = "right";
