@@ -2,6 +2,7 @@
   imports = [
     ./themes
     ./filetrees
+    ./rainbow-delimiters.nix
     ./scrollbar.nix
     ./nvim-ufo.nix
     ./image.nix

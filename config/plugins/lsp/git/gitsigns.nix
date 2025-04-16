@@ -2,7 +2,7 @@
   config.vim = {
     git.gitsigns = {
       enable = true;
-      codeActions.enable = true;
+      codeActions.enable = false;
       mappings = {
         blameLine = null;
         diffProject = null;

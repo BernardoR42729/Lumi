@@ -2,6 +2,7 @@
   config.vim = {
     treesitter = {
       enable = true;
+      addDefaultGrammars = true;
       autotagHtml = true;
     };
     # treesitter default fold sets foldenable to false

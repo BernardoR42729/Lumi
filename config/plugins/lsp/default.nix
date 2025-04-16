@@ -6,10 +6,11 @@
     ./aerial.nix
     ./luasnip.nix
     ./debug.nix
-    ./lsp.nix
+    ./core
     ./treesitter.nix
     ./guess-indent.nix
     ./autopairs.nix
+    ./actions-preview.nix
     # ./trouble.nix
   ];
 }

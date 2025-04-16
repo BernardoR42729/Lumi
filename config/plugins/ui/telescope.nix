@@ -311,6 +311,21 @@
         desc = "Search symbol in buffer";
       }
       {
+        key = "<leader>ls";
+        mode = ["n"];
+        action = ":Telescope aerial<CR>";
+        silent = true;
+        desc = "Search symbol in buffer";
+      }
+      {
+        key = "<leader>la";
+        mode = ["n"];
+        action = ''function() require("actions-preview").code_actions() end'';
+        silent = true;
+        lua = true;
+        desc = "Search symbol in buffer";
+      }
+      {
         key = "<leader>z";
         mode = ["n"];
         action = ":Telescope zoxide list<CR>";
