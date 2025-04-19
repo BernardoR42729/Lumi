@@ -1,7 +1,7 @@
 {
   config.vim.languages = {
     enableLSP = true;
-    enableFormat = true;
+    enableFormat = false;
     enableTreesitter = true;
     enableExtraDiagnostics = true;
     enableDAP = true;

@@ -1,5 +1,5 @@
-{
+{lib, ...}: {
   config.vim.lsp.null-ls = {
-    enable = true;
+    enable = lib.mkForce false;
   };
 }
