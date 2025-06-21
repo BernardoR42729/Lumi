@@ -1,6 +1,14 @@
 {
   config.vim.keymaps = [
     {
+      key = "jj";
+      mode = ["i"];
+      silent = true;
+      noremap = true;
+      desc = "Esc to jj";
+      action = "<Esc>";
+    }
+    {
       key = "j";
       mode = ["n" "v"];
       silent = true;
