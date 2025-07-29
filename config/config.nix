@@ -84,7 +84,7 @@
       swapfile = false;
       wrap = true;
       colorcolumn = "80";
-      mousescroll = "ver:1,hor:0";
+      mousescroll = "ver:3,hor:6";
       guicursor = "n:blinkon200,i-ci-ve:ver25";
       autochdir = true;
       scrolloff = 1000;
