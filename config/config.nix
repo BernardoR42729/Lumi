@@ -39,7 +39,9 @@
       };
       editorconfig = true;
     };
-    useSystemClipboard = true;
+    clipboard = {
+      registers = "unnamedplus";
+    };
     options = {
       breakindent = true;
       clipboard = "unnamedplus";
