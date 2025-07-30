@@ -1,7 +1,7 @@
 {
   config.vim = {
     mini.files = {
-      enabled = true;
+      enable = true;
     };
   };
 }
